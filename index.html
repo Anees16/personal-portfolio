@@ -229,7 +229,7 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <p style="color: var(--accent-pink); font-weight: 600; letter-spacing: 1px;">Hello, I'm</p>
-            <h1>Aneesha <span style="color: var(--accent-purple)">S.</span></h1>
+            <h1>Aneesha</h1>
             <h2 style="font-weight: 400; color: var(--text-gray)">Web and Mobile Application Developer <span style="color: var(--accent-pink)">&</span> Designer</h2>
             <div style="margin-top: 30px; display: flex; gap: 20px;">
                 <a href="#contact" class="btn-talk" style="padding: 1rem 2.5rem;">Hire Me</a>
@@ -498,7 +498,6 @@
 
         function initStars() {
             stars = [];
-            // Optimization: Fewer stars on mobile
             let divisor = window.innerWidth < 768 ? 12000 : 8000;
             let numberOfStars = (canvas.width * canvas.height) / divisor;
             for (let i = 0; i < numberOfStars; i++) {
@@ -549,7 +548,6 @@
 
             emailjs.sendForm(serviceID, templateID, this)
                 .then(() => {
-                    // Success UI State
                     contactContainer.innerHTML = `
                         <div style="text-align: center; padding: 50px 20px; animation: float 3s ease-in-out infinite;">
                             <i class="fa-solid fa-circle-check" style="font-size: 4rem; color: var(--accent-pink); margin-bottom: 20px;"></i>
